@@ -15,24 +15,20 @@ namespace RPGStudioMK;
 
 public static class KitManager
 {
-	public static string KitFolder => Path.Combine(Editor.AppDataFolder, "Kits").Replace('\\', '/');
+	public static string KitFolder => Path.Combine(Directory.GetCurrentDirectory(), "Kits").Replace('\\', '/');
 
 	public static List<Kit> GetAvailableKits()
 	{
-		List<Kit> kits = VersionMetadata.Kits.Select(l => new Kit(l[0], l[1], l[2])).ToList();
-		List<string> kitFiles = new List<string>();
+		List<Kit> kits = new List<Kit>();
+        List<string> kitFiles = new List<string>();
 		if (Directory.Exists(KitFolder))
 		{
 			foreach (string kitFile in Directory.GetFiles(KitFolder))
 			{
 				string relativeKitFilename = Path.GetFileName(kitFile);
-				if (!kits.Any(kit => kit.Filename == relativeKitFilename))
-				{
-					// Kit was added manually
 					string kitName = Path.GetFileNameWithoutExtension(relativeKitFilename);
 					Kit kit = new Kit(kitName, relativeKitFilename);
 					kits.Insert(0, kit);
-				}
 			}
 		}
 		kits.Reverse();

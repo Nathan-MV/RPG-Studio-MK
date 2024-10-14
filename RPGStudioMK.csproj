@@ -6,7 +6,7 @@
         <StartupObject>RPGStudioMK.Program</StartupObject>
         <Authors>Marijn Herrebout</Authors>
         <Product>RPG Studio MK</Product>
-        <Version>0.16.1</Version>
+        <Version>0.16.1.1</Version>
         <Platforms>x64</Platforms>
         <AssemblyName>RPG Studio MK</AssemblyName>
         <Configurations>Debug;Release</Configurations>
@@ -34,10 +34,10 @@
 
     <ItemGroup>
         <PackageReference Include="Crc32.NET" Version="1.2.0" />
-        <ProjectReference Include="..\amethyst\amethyst.csproj" />
-        <ProjectReference Include="..\MKUtils\MKUtils.csproj" />
-        <ProjectReference Include="..\odl\odl.csproj" />
-        <ProjectReference Include="..\rubydotnet\rubydotnet.csproj" />
+		<ProjectReference Include="..\amethyst\amethyst.csproj" />
+		<ProjectReference Include="..\MKUtils\MKUtils.csproj" />
+		<ProjectReference Include="..\odl\odl.csproj" />
+		<ProjectReference Include="..\rubydotnet\rubydotnet.csproj" />
     </ItemGroup>
 
 </Project>

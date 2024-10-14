@@ -188,6 +188,7 @@ public class Program
                 }
             }
 #else
+
 			Graphics.Update();
 #endif
         });

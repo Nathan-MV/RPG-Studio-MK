@@ -143,7 +143,7 @@ public static class Editor
     public static string GetVersionString()
     {
         string VersionName = "Version";
-        if (!string.IsNullOrEmpty(Program.CurrentProgramVersion) && Program.CurrentProgramVersion[0] == '0') VersionName = "Alpha";
+        if (!string.IsNullOrEmpty(Program.CurrentProgramVersion) && Program.CurrentProgramVersion[0] == '0') VersionName = "Unofficial Alpha";
         return VersionName + " " + Program.CurrentProgramVersion;
     }
 
@@ -664,7 +664,7 @@ public static class Editor
                 break;
             case EditorMode.Scripting:
                 // Select Scripting Mode
-                SetScriptingMode();
+                // SetScriptingMode();
                 break;
             case EditorMode.Database:
                 // Select Database mode

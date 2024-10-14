@@ -90,6 +90,7 @@ public class GamePlugin
 
     public void Save()
     {
+        return;
         string pluginFolder = Path.Combine(Data.ProjectPath, "Plugins", FolderName);
         if (Directory.Exists(pluginFolder))
         {

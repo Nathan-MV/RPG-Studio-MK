@@ -84,7 +84,9 @@ public class HardcodedDataStore
     {
         if (!IsValid(value, dataStore))
         {
-            throw new Exception($"The value '{value}' is invalid. It must be one of [{dataStore.Aggregate((a, b) => a + ", " + b)}].");
+            dataStore.Add(value);
+            Editor.RefreshHardcodedData();
+            //throw new Exception($"The value '{value}' is invalid. It must be one of [{dataStore.Aggregate((a, b) => a + ", " + b)}].");
         }
         return value;
     }
