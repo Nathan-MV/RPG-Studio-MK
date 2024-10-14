@@ -88,6 +88,11 @@ public class NewProjectWindow : PopupWindow
             new MessageBox("Error", "You need to specify the folder you want to create your game folder in.", ButtonType.OK, IconType.Warning);
             return;
         }
+        if (kitbox.SelectedIndex < 0 || kitbox.SelectedIndex >= kitbox.Items.Count)
+        {
+            new MessageBox("Error", "Please install a Kit in the 'Kits' folder.", ButtonType.OK, IconType.Warning);
+            return;
+        }
         PressedOK = true;
         Name = namebox.Text;
         Kit = (Kit) kitbox.Items[kitbox.SelectedIndex].Object;

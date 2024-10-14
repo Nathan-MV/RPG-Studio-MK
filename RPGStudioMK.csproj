@@ -9,7 +9,7 @@
         <Version>0.16.1.1</Version>
         <Platforms>x64</Platforms>
         <AssemblyName>RPG Studio MK</AssemblyName>
-        <Configurations>Debug;Release</Configurations>
+        <Configurations>Debug;Release;Linux</Configurations>
         <RootNamespace>RPGStudioMK</RootNamespace>
         <SignAssembly>False</SignAssembly>
         <Copyright>Marijn Herrebout</Copyright>

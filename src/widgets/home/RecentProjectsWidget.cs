@@ -40,6 +40,7 @@ public class RecentProjectsWidget : Widget
         if (height < 1) return;
         int drawCount = (int) Math.Floor(height / 48d);
         if (drawCount == lastDrawnCount) return;
+        if (drawCount == 0) return;
         noProjectsLabel.SetVisible(false);
         Sprites["files"].Bitmap = new Bitmap(314, 48 * drawCount);
         Sprites["files"].Bitmap.Unlock();
